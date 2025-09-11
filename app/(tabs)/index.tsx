@@ -2,15 +2,14 @@ import { TransactionDto } from '@/constants/types';
 import React from 'react';
 import { FlatList, SafeAreaView, StyleSheet, View } from 'react-native';
 import { Avatar, Card, Text } from 'react-native-paper';
-  
+
 const transactions = [
   { id: '1', name: 'Groceries', amount: '-$45.90', date: 'Aug 18' },
   { id: '2', name: 'Salary', amount: '+$2,000.00', date: 'Aug 17' },
-  {id: '3', name: 'Netflix', amount: '-$15.99', date: 'Aug 15' },
 ];
 
 export default function HomeScreen() {
-  const renderTransaction = ({ item }: {item: TransactionDto}) => (
+  const renderTransaction = ({ item }: { item: TransactionDto }) => (
     <Card style={styles.transactionCard}>
       <Card.Title
         title={item.name}
